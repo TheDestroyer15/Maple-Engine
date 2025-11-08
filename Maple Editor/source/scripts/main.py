@@ -1,6 +1,6 @@
 from flask import Flask, request
 import os
-import views
+import views, helpers
 source_dir = f'{os.path.abspath(os.getcwd())}\\Maple Editor\\source'
 
 app = Flask(__name__, static_folder=f'{source_dir}\\static', template_folder=f'{source_dir}\\templates')
@@ -17,6 +17,7 @@ def projects():
     return views.newProject(method, args)
 
 if __name__ == '__main__':
+    helpers.initialize()
     port = 5000
 
     import socket

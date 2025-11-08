@@ -4,6 +4,15 @@ source_dir = f'{os.path.abspath(os.getcwd())}\\Maple Editor\\source'
 project_location_container = 'projects.json'
 full_project_location_container = os.path.join(source_dir, project_location_container)
 
+def initialize():
+    if not os.path.exists(full_project_location_container):
+        with open(full_project_location_container, 'w') as f:
+            data = {
+                'projects': [],
+                'total projects': 0,
+            }
+            json.dump(data, f)
+
 class project:
     def __init__(self, name):
         self.name = name
@@ -43,7 +52,7 @@ class project:
         return
     @staticmethod
     def load(path):
-        with open(os.path.join(path, 'project.json'), 'r') as f:
+        with open(full_project_location_container, 'r') as f:
             data = json.load(f)
         proj = project(data['name'])
         proj.type = data['type']
