@@ -3,7 +3,6 @@
 
 namespace Maple {
 
-	// TODO: Multiple filesystems (eg. binary blob) should be supported
 	class File
 	{
 	public:

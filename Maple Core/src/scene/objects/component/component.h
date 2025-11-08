@@ -4,6 +4,9 @@ namespace Maple
 {
     class Component
     {
-    public:
+        public:
+            
+
+        
     };
 };

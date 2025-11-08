@@ -2,20 +2,25 @@
 
 namespace Maple
 {
-    Window::Window(short width, short height, const char* title)
-    {
+    Window::Window(short width, short height, const char* title){
         this->width = width;
         this->height = height;
         this->title = title;
     }
 
-    void Window::Init()
-    {
+    void Window::Init(){
         InitWindow(width, height, title);
     }
+
+    void Window::Update(){
+
+    }
+
+    void Window::Draw(){
+
+    }
     
-    Window::~Window()
-    {
+    Window::~Window(){
         // Cleanup resources
     }
 };
