@@ -3,6 +3,7 @@
 #include "transform3d.h"
 #include <vector>
 #include <string>
+#include <../../util/util.h>
 
 namespace Maple
 {

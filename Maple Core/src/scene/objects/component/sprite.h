@@ -6,6 +6,7 @@ namespace Maple
   class Sprite : public Component
   {
     public:
+
       Sprite();
       ~Sprite();
   };  
